@@ -219,9 +219,26 @@ Out of scope for MVP unless explicitly requested:
 
 Some development environments may include a local `.handoff` folder or symlink in the repository root. It is ignored by Git and is not required for normal project work.
 
-If `.handoff` exists, agents may inspect it for transient local context before starting substantial work. Do not fail or block work if it is absent.
+If `.handoff` exists, agents may inspect it for transient local context before starting substantial work. Start with `.handoff/ACTIVE.md`.
+
+Read `.handoff/README.md` only if the handoff conventions are unclear. Do not scan `.handoff/inbox/` unless `ACTIVE.md` or the user explicitly points to a relevant file.
+
+Do not fail or block work if `.handoff` is absent.
 
 The handoff workspace is not a source of truth. Durable decisions, architecture notes and project rules belong in tracked documentation such as `docs/90-decisions.md`, topic docs or `AGENTS.md`.
+
+If local filesystem access is available and the task materially changes project state, update `.handoff/ACTIVE.md` before finishing work. Keep the update short and current-state oriented.
+
+Update `ACTIVE.md` especially when changing:
+
+- current branch or last relevant commit
+- working tree status
+- completed action
+- next recommended action
+- local uncommitted state
+- durable candidates that may need promotion into repo docs
+
+Do not turn `ACTIVE.md` into a chronological chat log. Replace stale state instead of appending noise.
 
 Do not commit `.handoff` content.
 
