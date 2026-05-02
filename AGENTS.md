@@ -29,7 +29,40 @@ Choose the approach that correctly and completely solves the problem.
 
 Do the work a careful senior developer would do, including relevant edge cases. Be thorough, but do not gold-plate.
 
-The code should remain readable for a beginner-to-intermediate Python developer. Prefer simple, direct structure over unnecessary layers of functions, classes, factories or abstractions.
+### Implementation quality
+
+Do not optimize for the fastest-looking implementation.
+
+Avoid two common failure modes:
+
+1. Quick-and-dirty code that only works for the happy path.
+2. Overengineered code that adds unnecessary layers, abstractions, configuration, frameworks or speculative future-proofing.
+
+Implement the smallest clean solution that fully satisfies the requested scope.
+
+Code should be:
+
+- correct for the requested behavior
+- readable
+- testable where practical
+- maintainable without unnecessary abstraction
+- explicit about real failure boundaries
+
+Do not add generic engines, plugin systems, factory layers, broad configuration systems, or multi-game abstractions before the first concrete EU4 vertical slice works.
+
+If a simple direct implementation is enough, use it.
+
+If a more structured implementation is needed, keep the structure proportional to the problem being solved.
+
+### Code readability
+
+Code should be easy to follow for a beginner-to-intermediate Python developer.
+
+Prefer explicit names, straightforward control flow and small focused modules.
+
+Avoid clever one-liners, unnecessary indirection, deep inheritance, factory-heavy designs and function-over-function layering unless they solve a real problem.
+
+Readable and boring code is preferred over clever code.
 
 ### Scope
 
