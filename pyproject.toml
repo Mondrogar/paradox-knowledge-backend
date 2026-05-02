@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paradox-knowledge"
+version = "0.1.0"
+description = "Paradox game file knowledge backend"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Mondrogar", email = "mondrogar@example.com"}
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+paradox-knowledge = "paradox_knowledge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "B"]
+ignore = []
+
+[tool.ruff.format]
+line-length = 88
+quote-style = "double"
