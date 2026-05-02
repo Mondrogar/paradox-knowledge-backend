@@ -1,0 +1,24 @@
+# Generated databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated indexes / exports
+data/
+exports/
+generated/
+.local-data/
+
+# Local game files / mounted sources
+game_files/
+eu4/
+victoria3/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# Docker/local overrides
+docker-compose.override.yml
