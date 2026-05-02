@@ -215,6 +215,16 @@ Out of scope for MVP unless explicitly requested:
 - universal Paradox framework abstractions
 - hosted multi-user product features
 
+## Optional Local Handoff
+
+Some development environments may include a local `.handoff` folder or symlink in the repository root. It is ignored by Git and is not required for normal project work.
+
+If `.handoff` exists, agents may inspect it for transient local context before starting substantial work. Do not fail or block work if it is absent.
+
+The handoff workspace is not a source of truth. Durable decisions, architecture notes and project rules belong in tracked documentation such as `docs/90-decisions.md`, topic docs or `AGENTS.md`.
+
+Do not commit `.handoff` content.
+
 ## Documentation Updates
 
 Update documentation when implementation changes project behavior, scope, architecture or accepted decisions.
