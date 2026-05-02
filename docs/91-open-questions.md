@@ -39,7 +39,7 @@
 ## Legal and Hosted Data
 
 - What contact path should be used for rights-holder takedown or modification requests?
-- Should the hosted service expose only targeted query endpoints in v1?
+- Which targeted query endpoints and response fields should the initial hosted service expose?
 - Should complete generated database downloads remain permanently out of scope, or only out of scope for the initial hosted version?
 - What attribution text should be shown in API responses or documentation?
 - Should hosted data include localisation text, script fragments, or only normalized explanations?
