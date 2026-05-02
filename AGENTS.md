@@ -253,3 +253,38 @@ Use:
 - relevant topic docs for durable design details
 
 Do not use `AGENTS.md` as the main project specification. Keep detailed project knowledge in `docs/`.
+
+## AI Workflow Artifacts
+
+Larger implementation work may use AI workflow tools such as Superpowers for analysis, specs, plans, reviews and audits.
+
+Temporary AI workflow artifacts must not be written to tracked repository `docs/` by default.
+
+Use the local handoff workspace when available:
+
+```text
+.handoff/superpowers/
+  plans/
+  specs/
+  reviews/
+  audits/
+```
+
+If `.handoff` is not available, use another untracked local workspace or ask before creating workflow artifact files.
+
+Do not create tracked folders such as:
+
+```text
+docs/superpowers/
+```
+
+Repository `docs/` is reserved for durable project documentation.
+
+Only promote distilled, accepted information into tracked docs:
+
+- accepted decisions -> `docs/90-decisions.md`
+- open questions -> `docs/91-open-questions.md`
+- architecture/design details -> relevant topic docs under `docs/`
+- coding-agent rules -> `AGENTS.md`
+
+Do not copy full temporary plans, specs, reviews or audit logs into tracked docs unless explicitly requested.

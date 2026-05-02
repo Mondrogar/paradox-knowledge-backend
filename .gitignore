@@ -31,6 +31,9 @@ build/
 
 # Docker/local overrides
 docker-compose.override.yml
+
 # Local transient AI handoff folder or symlink
 .handoff
 .handoff/
+
+docs/superpowers/
